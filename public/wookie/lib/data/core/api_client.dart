@@ -9,7 +9,10 @@ class ApiClient {
   ApiClient(this._client);
   dynamic get() async {
     final Response response = await _client.get('${ApiConstants.BASE_URL}',
-        headers: {'Authorization': ApiConstants.AUTHORIZATION});
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': ApiConstants.AUTHORIZATION
+        });
     if (response.statusCode == 200) {
       return json.decode(response.body);
     } else {
