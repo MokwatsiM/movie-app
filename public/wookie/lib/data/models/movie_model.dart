@@ -28,7 +28,7 @@ class Movies {
   String director;
   List<String> genres;
   String id;
-  int imdbRating;
+  // int imdbRating;
   String length;
   String overview;
   String poster;
@@ -43,7 +43,7 @@ class Movies {
       this.director,
       this.genres,
       this.id,
-      this.imdbRating,
+      // this.imdbRating,
       this.length,
       this.overview,
       this.poster,
@@ -53,12 +53,12 @@ class Movies {
 
   Movies.fromJson(Map<String, dynamic> json) {
     backdrop = json['backdrop'];
-    cast = json['cast'].cast<String>();
+    // cast = json['cast'].cast<String>();
     classification = json['classification'];
-    director = json['director'];
-    genres = json['genres'].cast<String>();
+    // director = json['director'];
+    // genres = json['genres'].cast<String>();
     id = json['id'];
-    imdbRating = json['imdb_rating'];
+    // imdbRating = json['imdb_rating'];
     length = json['length'];
     overview = json['overview'];
     poster = json['poster'];
@@ -75,7 +75,7 @@ class Movies {
     data['director'] = this.director;
     data['genres'] = this.genres;
     data['id'] = this.id;
-    data['imdb_rating'] = this.imdbRating;
+    // data['imdb_rating'] = this.imdbRating;
     data['length'] = this.length;
     data['overview'] = this.overview;
     data['poster'] = this.poster;
