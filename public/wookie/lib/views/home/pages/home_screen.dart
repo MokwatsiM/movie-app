@@ -56,8 +56,19 @@ class _HomeScreenState extends State<HomeScreen> {
             return Container(
               width: 160,
               child: Card(
-                  child: Wrap(
-                children: [Image.network(item.backdrop)],
+                  child: Material(
+                elevation: 32,
+                borderRadius: BorderRadius.circular(16),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.network(
+                      item.poster,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               )),
             );
           }),
