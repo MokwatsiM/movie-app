@@ -3,7 +3,7 @@ class MovieModel {
 
   MovieModel({this.movies});
 
-   MovieModel.fromJson(Map<String, dynamic> json) {
+  MovieModel.fromJson(Map<String, dynamic> json) {
     if (json['movies'] != null) {
       movies = new List<Movies>();
       json['movies'].forEach((v) {
@@ -28,7 +28,7 @@ class Movies {
   String director;
   List<String> genres;
   String id;
-  // int imdbRating;
+  double imdbRating;
   String length;
   String overview;
   String poster;
@@ -43,7 +43,7 @@ class Movies {
       this.director,
       this.genres,
       this.id,
-      // this.imdbRating,
+      this.imdbRating,
       this.length,
       this.overview,
       this.poster,
@@ -58,7 +58,7 @@ class Movies {
     // director = json['director'];
     // genres = json['genres'].cast<String>();
     id = json['id'];
-    // imdbRating = json['imdb_rating'];
+    imdbRating = json['imdb_rating'].toDouble() ?? 0;
     length = json['length'];
     overview = json['overview'];
     poster = json['poster'];
